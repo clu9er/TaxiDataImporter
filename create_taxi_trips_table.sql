@@ -17,3 +17,6 @@ CREATE INDEX IX_PULocationID ON TaxiTrips (PULocationID);
 
 -- Create an index on tip_amount for finding the highest tip_amount on average
 CREATE INDEX IX_TipAmount ON TaxiTrips (TipAmount);
+
+-- Create a composite index for finding highest tip_amount on average by PULocationId
+CREATE INDEX IX_PULocationID_TipAmount ON TaxiTrips (PULocationID, TipAmount);
